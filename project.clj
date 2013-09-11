@@ -1,5 +1,5 @@
 (defproject ranking "0.0.1"
-  :description "A website deployable to AppEngine"
+  :description "Ranking Avalon Game Arena jugadores Yu-Gi-Oh! TCG"
   :dependencies [[org.clojure/clojure "1.4.0"]
                  [joodo "0.11.0"]
                  [hyperion/hyperion-api "3.3.0"]
@@ -8,14 +8,8 @@
 
   :joodo-root-namespace ranking.root
 
-  ; leiningen 2
   :profiles {:dev {:dependencies [[speclj "2.2.0"]]}}
   :test-paths ["spec/"]
   :java-source-paths ["src/"]
   :plugins [[speclj "2.2.0"]]
-
-  ; leiningen 1
-  :test-path "spec/"
-  :java-source-path "src/"
-
   )
