@@ -11,7 +11,7 @@
     ))
 
 
-(set-ds! (new-datastore :implementation :sqlite :connection-url "jdbc:sqlite:app/data/ranking.db" :database "ranking"))
+(set-ds! (new-datastore :implementation :sqlite :connection-url "jdbc:sqlite:data/ranking.db" :database "ranking"))
 
 
 (defroutes ranking-routes
