@@ -3,7 +3,7 @@
   :dependencies [[org.clojure/clojure "1.4.0"]
                  [joodo "0.11.0"]
                  [hyperion/hyperion-api "3.3.0"]
-                 [hyperion/hyperion-mysql "3.3.0"]
+                 [hyperion/hyperion-sqlite "3.3.0"]
                  ]
 
   :joodo-root-namespace ranking.root
