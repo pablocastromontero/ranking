@@ -9,7 +9,8 @@
             ))
 
 (defn- do-index []
-  (let [jugadores (find-by-kind :jugadores :sort [:id :asc ])]
+  (let [jugadores (find-by-kind :jugadores)
+        ]
     (render-template "index/index" :jugadores jugadores))
   )
 

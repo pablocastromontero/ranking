@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Leiningen: filecabinet:filecabinet:1.0.4">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/filecabinet/filecabinet/1.0.4/filecabinet-1.0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

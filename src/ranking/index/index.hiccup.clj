@@ -10,5 +10,7 @@
    (for [jugador (:jugadores *view-context*)]
      [:tr {}
       [:td {}
-       [:a {:href (format "/jugador/%s" (:id jugador))} (:nombre jugador)]]
-      [:td (:puntos jugador)]])])
+       [:a {:href (format "/jugador/%s" (:id jugador))} (:nombre jugador)]
+      ]
+      [:td (:puntos jugador)]])
+   ])
