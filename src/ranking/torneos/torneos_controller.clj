@@ -6,7 +6,7 @@
             [joodo.views :refer [render-template render-html]]
             [joodo.env :refer [env *env*]]
             [hyperion.api :refer :all]
-            [ranking.torneos.torneos-presenter :as presenter :refer [index]]
+            [ranking.torneos.torneos-presenter :as presenter :refer [detalle]]
             ))
 
 (defn- do-torneos []
@@ -16,7 +16,7 @@
 
 (defn- do-torneo [key]
   (let [torneo (find-by-key key)]
-    (render-template "torneos/torneo" :torneo torneo :participantes (presenter/index key))
+    (render-template "torneos/torneo" :torneo torneo :participantes (presenter/detalle key))
     )
   )
 

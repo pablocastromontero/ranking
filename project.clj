@@ -2,8 +2,8 @@
   :description "Ranking Avalon Game Arena jugadores Yu-Gi-Oh! TCG"
   :dependencies [[org.clojure/clojure "1.4.0"]
                  [joodo "0.11.0"]
-                 [hyperion/hyperion-api "3.3.0"]
-                 [hyperion/hyperion-postgres "3.3.0"]
+                 [hyperion/hyperion-api "3.6.0"]
+                 [hyperion/hyperion-postgres "3.6.0"]
                  ]
 
   :joodo-root-namespace ranking.root

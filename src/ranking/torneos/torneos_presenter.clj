@@ -1,8 +1,7 @@
 (ns ranking.torneos.torneos-presenter
-  (:require [hyperion.api :refer :all]
-            [chee.datetime :refer [now]]))
+  (:require [hyperion.api :refer :all]))
 
-(defn index [key]
+(defn detalle [key]
   (let [participantes (filter (fn[x] (= key (x :torneo-key))) (find-by-kind :jugadoresxtorneo))
         participantes-presenter '()
         ]
