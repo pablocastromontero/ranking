@@ -9,20 +9,26 @@
     [joodo.controllers :only (controller-router)]
     [hyperion.api]
     [hyperion.postgres]
+    [ranking.torneos.jugadoresxtorneo :only (jugadoresxtorneo)]
+    [ranking.torneos.torneo :only (torneos)]
+    [ranking.jugadores.jugador :only (jugadores)]
     ))
 
 
-(set-ds! (new-datastore :implementation :postgres :connection-url "jdbc:postgresql://ec2-23-21-196-147.compute-1.amazonaws.com:5432/d3dgs2ne7auio9?user=gdpdllhwvtgaec&password=vQ9c4rUmyoeGXRHkpM1LrqO8iG&ssl=true"))
-;(set-ds! (new-datastore :implementation :postgres :connection-url "jdbc:postgresql://localhost:5432/ranking?user=pablo"))
+;System.setProperty( "sun.security.ssl.allowUnsafeRenegotiation", "true" )
+
+;(System/setProperty "sun.security.ssl.allowUnsafeRenegotiation" "true")
+;(set-ds! (new-datastore :implementation :postgres :connection-url "jdbc:postgresql://23.21.196.147:5432/dehdm1r23cnn6k?user=rflqvcnlvsqmzq&password=PdB7ouH8F1KV_DoY489UOzjkQg&ssl=true"))
+(set-ds! (new-datastore :implementation :postgres :connection-url "jdbc:postgresql://localhost:5432/ranking?user=pablo"))
 
 
 (defroutes ranking-routes
   (GET "/" [] (redirect "/index"))
   (controller-router 'ranking)
-  (not-found (render-template "not_found" :template-root "ranking/util" :ns `ranking.view.view-helpers)))
+  (not-found (render-template "not_found" :template-root "ranking/util" :ns `ranking.util.view-helpers)))
 
 (def app-handler
   (->
     ranking-routes
-    (wrap-view-context :layout "util/layout" :template-root "ranking" :ns `ranking.view.view-helpers)))
+    (wrap-view-context :layout "util/layout" :template-root "ranking" :ns `ranking.util.view-helpers)))
 

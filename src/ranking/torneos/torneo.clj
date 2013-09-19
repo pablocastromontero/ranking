@@ -1,9 +1,7 @@
 (ns ranking.torneos.torneo
   (:require [hyperion.api :refer :all]))
 
-(defentity Torneo
+(defentity torneos
   [nombre]
   [fecha]
-  [participantes]
-  [created-at]
-  [updated-at])
+  [participantes])

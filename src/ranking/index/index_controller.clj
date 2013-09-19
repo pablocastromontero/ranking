@@ -5,13 +5,14 @@
             [ring.util.response :refer [redirect]]
             [joodo.views :refer [render-template render-html]]
             [joodo.env :refer [env *env*]]
-            [hyperion.api :refer :all ]
+            [hyperion.api :refer :all]
             ))
 
 (defn- do-index []
-  (let [jugadores (find-by-kind :jugadores)
+  (let [jugadores (find-by-kind :jugadores :limit 10 :sorts [:puntos :desc])
+        torneos (find-by-kind :torneos :limit 10)
         ]
-    (render-template "index/index" :jugadores jugadores))
+    (render-template "index/index" :jugadores jugadores :torneos torneos))
   )
 
 (defroutes index-controller

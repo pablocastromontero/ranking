@@ -1,8 +1,6 @@
-(ns ranking.torneos.torneo
+(ns ranking.jugadores.jugador
   (:require [hyperion.api :refer :all]))
 
-(defentity Torneo
+(defentity jugadores
   [nombre]
-  [puntos]
-  [created-at]
-  [updated-at])
+  [puntos])
